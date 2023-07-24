@@ -4,11 +4,13 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Mangesh@09
+  application:
+    name: BILLING-SERVICE
 
   jpa:
     show-sql: true
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     database: MYSQL
 
 

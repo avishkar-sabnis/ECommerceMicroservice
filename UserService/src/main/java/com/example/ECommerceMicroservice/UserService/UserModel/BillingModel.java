@@ -1,4 +1,4 @@
-package com.example.ECommerceMicroservice.BillingService.BillingModel;
+package com.example.ECommerceMicroservice.UserService.UserModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -18,7 +18,6 @@ public class BillingModel {
         @Id
         @Column(name = "billId")
         private int billId;
-
         @Transient
         private String userName;
         @Column(name = "userBillAmount")

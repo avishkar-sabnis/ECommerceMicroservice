@@ -18,4 +18,8 @@ public class BillingService {
     public BillingModel getBillDetails(int billId) {
         return billingDAO.findById(billId).get();
     }
+
+    public Iterable<BillingModel> getAllBillDetails() {
+        return billingDAO.findAll();
+    }
 }

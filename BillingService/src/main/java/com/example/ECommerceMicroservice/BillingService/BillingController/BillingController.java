@@ -12,7 +12,7 @@ public class BillingController {
     @Autowired
     BillingService billingService;
 
-    @GetMapping("/getBillById/{userId}")
+    @GetMapping("/getBillById/{billId}")
     public BillingModel getBillDetails(@PathVariable int billId){
         return billingService.getBillDetails(billId);
     }
@@ -22,8 +22,10 @@ public class BillingController {
         return billingService.createBill(billingModel);
     }
 
-
-
+    @GetMapping("/getALlBills")
+    public Iterable<BillingModel> getAllBillDetails(){
+        return billingService.getAllBillDetails();
+    }
 
 
 }
