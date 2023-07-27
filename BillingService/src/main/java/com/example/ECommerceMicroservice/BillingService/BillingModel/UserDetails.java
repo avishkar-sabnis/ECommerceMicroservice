@@ -1,4 +1,4 @@
-package com.example.ECommerceMicroservice.UserService.UserModel;
+package com.example.ECommerceMicroservice.BillingService.BillingModel;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

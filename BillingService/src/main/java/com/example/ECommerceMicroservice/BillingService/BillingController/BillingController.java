@@ -12,9 +12,9 @@ public class BillingController {
     @Autowired
     BillingService billingService;
 
-    @GetMapping("/getBillById/{billId}")
-    public BillingModel getBillDetails(@PathVariable int billId){
-        return billingService.getBillDetails(billId);
+    @GetMapping("/getBillById/{userId}")
+    public BillingModel getBillDetails(@PathVariable int userId){
+        return billingService.getBillDetails(userId);
     }
 
     @PostMapping("/createUser")

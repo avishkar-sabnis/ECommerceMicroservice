@@ -15,10 +15,14 @@ import javax.persistence.*;
 @Table(name = "billdetails_ecommerce")
 public class BillingModel {
 
-        @Id
+
         @Column(name = "billId")
         private int billId;
 
+
+        @Id
+        @Column(name = "userId")
+        private int userId;
         @Transient
         private String userName;
         @Column(name = "userBillAmount")

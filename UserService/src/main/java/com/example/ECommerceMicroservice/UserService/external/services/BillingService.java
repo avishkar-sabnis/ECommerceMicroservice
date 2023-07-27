@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface BillingService {
 
 
-    @GetMapping("/billing/getBillById/{billId}")
-    BillingModel getBillDetails(@PathVariable int billId);
+    @GetMapping("/billing/getBillById/{userId}")
+    BillingModel getBillDetails(@PathVariable int userId);
+
+
 
 
 }
