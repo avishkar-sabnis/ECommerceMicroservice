@@ -17,9 +17,12 @@ import java.util.Date;
 @Table(name = "products_details")
 public class ProductsDetails {
 
-    @Id
+
     @Column(name = "productId")
     private int productId;
+    @Id
+    @Column(name = "userId")
+    private int userId;
     @Column(name = "productName")
     private String productName;
     @Column(name = "productPrice")
@@ -29,20 +32,11 @@ public class ProductsDetails {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date productExpiry;
 
-    public ProductsDetails(int productId, String productName, int productPrice, Date productExpiry) {
+    public ProductsDetails(int productId, int userId, String productName, int productPrice, Date productExpiry) {
         this.productId = productId;
+        this.userId = userId;
         this.productName = productName;
         this.productPrice = productPrice;
         this.productExpiry = productExpiry;
-    }
-
-    @Override
-    public String toString() {
-        return "ProductsDetails{" +
-                "productId=" + productId +
-                ", productName='" + productName + '\'' +
-                ", productPrice=" + productPrice +
-                ", productExpiry=" + productExpiry +
-                '}';
     }
 }

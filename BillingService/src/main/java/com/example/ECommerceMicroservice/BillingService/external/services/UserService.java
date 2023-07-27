@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 public interface UserService {
 
 
-    @GetMapping("/userManagement/getUserDetails/{userId}")
-    UserDetails getUserDetails(@PathVariable int userId);
+    @GetMapping("/userManagement/getUserByUserName/{userId}")
+    public String getUserName(@PathVariable int userId);
 
 
 

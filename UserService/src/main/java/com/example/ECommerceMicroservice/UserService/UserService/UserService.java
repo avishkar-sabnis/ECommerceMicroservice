@@ -31,19 +31,23 @@ public class UserService {
     public UserDetails getUserDetails(int userId) {
         UserDetails user = userDAO.findById(userId).get();
        BillingModel billingObject = billingService.getBillDetails(userId);
-        //ProductsDetails productObject= productService.getProductDetails(userId);
-        user.setUserBillAmount(billingObject.getUserBillAmount());
-       /* List list = new ArrayList<>();
+       user.setUserBillAmount(billingObject.getUserBillAmount());
+       ProductsDetails productObject= productService.getProductDetails(userId);
+        List list = new ArrayList<>();
         list.add(productObject.getProductId());
         list.add(productObject.getProductName());
         list.add(productObject.getProductPrice());
         list.add(productObject.getProductExpiry());
-        user.setUserProducts(list);*/
-
-
+        user.setUserProducts(list);
         return user;
     }
 
+
+    public String getUserName(int userId) {
+        UserDetails userDetails = userDAO.findById(userId).get();
+        String userName = userDetails.getUserName();
+        return userName;
+    }
 
     public UserDetails createUser(UserDetails userDetails) {
         return userDAO.save(userDetails);

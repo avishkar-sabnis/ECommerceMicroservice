@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Getter
 @Setter
@@ -28,7 +29,7 @@ public class BillingModel {
         @Column(name = "userBillAmount")
         private int userBillAmount;
         @Transient
-        private String userProducts;
+        private List userProducts;
 
 
 

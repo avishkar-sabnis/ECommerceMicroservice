@@ -10,8 +10,8 @@ public interface ProductService {
 
 
     //http://localhost:9090/products/findProductById/1
-    @GetMapping("products/findProductById/{productId}")
-    ProductsDetails getProductDetails(@PathVariable int productId);
+    @GetMapping("products/findProductById/{userId}")
+    ProductsDetails getProductDetails(@PathVariable int userId);
 
 
 

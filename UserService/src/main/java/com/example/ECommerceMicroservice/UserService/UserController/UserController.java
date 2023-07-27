@@ -17,6 +17,10 @@ public class UserController {
         return userService.getUserDetails(userId);
     }
 
+
+    @GetMapping("/getUserByUserName/{userId}")
+    public String getUserName(@PathVariable int userId){return userService.getUserName(userId); }
+
     @PostMapping("/createUser")
     public UserDetails createUser(@RequestBody UserDetails userDetails){
         return userService.createUser(userDetails);
