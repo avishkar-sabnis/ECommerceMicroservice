@@ -1,0 +1,27 @@
+server:
+  port: 9093
+
+
+spring:
+  application:
+    name: API-GATEWAY
+
+
+
+  cloud:
+    gateway:
+      routes:
+        - id: BILLING-SERVICE
+          uri: lb://BILLING-SERVICE
+          predicates:
+            - Path=/billing/**
+
+        - id: USER-SERVICE
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/userManagement/**
+
+        - id: PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**

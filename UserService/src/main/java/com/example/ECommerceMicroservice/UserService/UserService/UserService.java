@@ -30,8 +30,8 @@ public class UserService {
 
     public UserDetails getUserDetails(int userId) {
         UserDetails user = userDAO.findById(userId).get();
-       BillingModel billingObject = billingService.getBillDetails(userId);
-       user.setUserBillAmount(billingObject.getUserBillAmount());
+      // BillingModel billingObject = billingService.getBillDetails(userId);
+     //  user.setUserBillAmount(billingObject.getUserBillAmount());
        ProductsDetails productObject= productService.getProductDetails(userId);
         List list = new ArrayList<>();
         list.add(productObject.getProductId());
